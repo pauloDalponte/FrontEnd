@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Aula1</title>
+    <link rel="stylesheet" href="chat.css">
+  </head>
+
+<div id="chat-page">
+  <header>
+    <h1>Atendimento online</h1>
+  </header>
+  <main>
+<div class="chat">
+  <div class="attendant">
+    <p><strong>Atendente diz:</strong></p>
+    <p class="msg-at">Bla bla bla atendente1</p>
+  </div>
+  <div class="attendant">
+    <p><strong>Atendente diz:</strong></p>
+    <p class="msg-at">Bla bla bla atendente2</p>
+  </div>
+  <div class="you-message">
+    <p><strong>Você diz:</strong></p>
+    <p class="msg-vc">Bla bla bla voce1</p>
+  </div>
+  <div class="you-message">
+    <p><strong>Você diz:</strong></p>
+    <p class="msg-vc">Bla bla bla voce2</p>
+  </div>
+</div>
+    </main>
+  <form id="send-mensage" action="processar.php" method="post">
+    <input type= "Text" id = "send" name="send" placeholder = "Digite sua mensagem...">  
+    <button type="submit">Enviar</button>
+  </form>
+</div>
