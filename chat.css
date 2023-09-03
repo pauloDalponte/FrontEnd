@@ -28,6 +28,8 @@ iframe {
 }
 
 .chat{
+  max-height: 400px;
+  overflow-y: auto;
   margin: 10px ; 
   background-color: rgb(200, 200, 200);
   border-radius: 10px;
@@ -66,24 +68,26 @@ iframe {
   padding: 10px;
 }
 
-.send-mensage {
+form {
   display: flex;
   align-items: center; 
   margin: 0 auto; 
 }
-input{
+form input{
   background-color: lightgray;
   padding: 10px;
   border: 2px solid black;
+  width: 90vw;
   border-radius: 10px;
   font-size: 18px;
   margin: 1px 5px;
 }
-button {
+form button {
   font-size: 16px;
   font-weight: bold;
   background-color: black;
   color: white;
+  width: 20vw;
   padding: 15px 10px;
   border: 0;
   border-radius: 10px;
