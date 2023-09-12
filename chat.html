@@ -75,10 +75,13 @@
           novaMsg.appendChild(pMessage);/*coloca a tag p dentro da div*/
 
           chat.appendChild(novaMsg); /*coloca a div novaMsg dentro da div chat*/
+          chat.scrollTop = chat.scrollHeight;
         }
         msgEnviar = "";
-        document.getElementById("send-message").reset(); 
+        document.getElementById("send-message").reset();
+         
       }
       document.getElementById("send-message").addEventListener("submit", enviaMsg); 
+      </script>
   </body>
 </html>
