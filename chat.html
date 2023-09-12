@@ -1,35 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Aula1</title>
+    <meta charset="UTF-8" />
+    <title>Chat de atendimento</title>
     <link rel="stylesheet" href="chat.css">
   </head>
-
-<div id="chat-page">
-  <header>
-    <h1>Atendimento online</h1>
-  </header>
-  <main>
-<div class="chat">
-  <div class="attendant">
-    <p><strong>Atendente diz:</strong></p>
-    <p class="msg-at">Bla bla bla atendente1</p>
-  </div>
-  <div class="attendant">
-    <p><strong>Atendente diz:</strong></p>
-    <p class="msg-at">Bla bla bla atendente2</p>
-  </div>
-  <div class="you-message">
-    <p><strong>Você diz:</strong></p>
-    <p class="msg-vc">Bla bla bla voce1</p>
-  </div>
-  <div class="you-message">
-    <p><strong>Você diz:</strong></p>
-    <p class="msg-vc">Bla bla bla voce2</p>
-  </div>
-</div>
-    </main>
-  <form id="send-mensage" action="processar.php" method="post">
-    <input type= "Text" id = "send" name="send" placeholder = "Digite sua mensagem...">  
-    <button type="submit">Enviar</button>
-  </form>
-</div>
+  <body>
+    <div id="chat-page">
+      <header>
+        <h1>Atendimento online</h1>
+      </header>
+      <div class ="chat">
+        <div class ="attendant">
+          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class="msg-chat">Bla bla bla </p>
+        </div>
+        <div class ="attendant">
+          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class="msg-chat">Bla bla bla ? bla bla</p>
+        </div>
+        <div class ="user-message">
+          <p class = "msg-user"><strong>Você diz:</strong></p>
+          <p class ="msg-chat">Para de bla bla bla</p>
+        </div>
+        <div class ="user-message">
+          <p class = "msg-user"><strong>Você diz:</strong></p>
+          <p class ="msg-chat">nao quero bla bla bla</p>
+        </div>
+        <div class ="attendant">
+          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class ="msg-chat">Pk sem bla bla bla </p>
+        </div>
+        <div class ="user-message">
+          <p class = "msg-user"><strong>Você diz:</strong></p>
+          <p class ="msg-chat">nada a ver</p>
+        </div>
+        <div class ="attendant">
+          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class ="msg-chat">bla bla bla muito massa </p>
+        </div>
+      </div>
+      <form id="send-mensage" action="index.html" method="post">
+        <input type= "Text" id = "send" name="msg" placeholder = "Digite sua mensagem..."/>  
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </body>
+</html>
