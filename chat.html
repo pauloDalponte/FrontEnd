@@ -77,9 +77,8 @@
           chat.appendChild(novaMsg); /*coloca a div novaMsg dentro da div chat*/
           chat.scrollTop = chat.scrollHeight;
         }
-        msgEnviar = "";
         document.getElementById("send-message").reset();
-         
+        document.getElementById("send").focus();
       }
       document.getElementById("send-message").addEventListener("submit", enviaMsg); 
       </script>
