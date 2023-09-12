@@ -10,13 +10,13 @@
       <header>
         <h1>Atendimento online</h1>
       </header>
-      <div class ="chat">
+      <div id="chat">
         <div class ="attendant">
-          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class = "msg-at"><strong>Atendente diz:</strong></p>
           <p class="msg-chat">Bla bla bla </p>
         </div>
         <div class ="attendant">
-          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class = "msg-at"><strong>Atendente diz:</strong></p>
           <p class="msg-chat">Bla bla bla ? bla bla</p>
         </div>
         <div class ="user-message">
@@ -28,7 +28,7 @@
           <p class ="msg-chat">nao quero bla bla bla</p>
         </div>
         <div class ="attendant">
-          <p class = "msg-at"></p><strong>Atendente diz:</strong></p>
+          <p class = "msg-at"><strong>Atendente diz:</strong></p>
           <p class ="msg-chat">Pk sem bla bla bla </p>
         </div>
         <div class ="user-message">
@@ -40,10 +40,45 @@
           <p class ="msg-chat">bla bla bla muito massa </p>
         </div>
       </div>
-      <form id="send-mensage" action="index.html" method="post">
-        <input type= "Text" id = "send" name="msg" placeholder = "Digite sua mensagem..."/>  
-        <button type="submit">ENVIAR</button>
+      <form id="send-message" action="index.html" method="post">
+        <input 
+        id = "send" 
+        name="send" 
+        type= "Text" 
+        placeholder = "Digite sua mensagem..."/>  
+        <button 
+        id = "btEnvia"
+        name = "btEnvia"
+        type="submit">ENVIAR</button>
       </form>
     </div>
+    <script>
+      function enviaMsg(event) {
+        event.preventDefault();
+        let msgEnviar = document.getElementById("send").value;
+
+        if (msgEnviar !==""){
+          const chat = document.getElementById("chat"); /*onde deve ser adicionado*/
+
+          const novaMsg =document.createElement("div");/*cria a div*/
+          novaMsg.classList.add("user-message")
+
+          let pUser = document.createElement("p"); /*cria a tag p*/
+          pUser.classList.add("msg-user");
+          pUser.innerHTML = "<strong>Você diz:</strong>";
+
+          let pMessage = document.createElement("p");/*cria a tag p*/
+          pMessage.classList.add("msg-chat");
+          pMessage.textContent = msgEnviar;
+
+          novaMsg.appendChild(pUser); /*coloca a tag p dentro da div*/
+          novaMsg.appendChild(pMessage);/*coloca a tag p dentro da div*/
+
+          chat.appendChild(novaMsg); /*coloca a div novaMsg dentro da div chat*/
+        }
+        msgEnviar = "";
+        document.getElementById("send-message").reset(); 
+      }
+      document.getElementById("send-message").addEventListener("submit", enviaMsg); 
   </body>
 </html>

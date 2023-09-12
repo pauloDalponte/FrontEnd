@@ -42,7 +42,7 @@ body {
   font-family:"Gill Sans", sans-serif;
 }
 
-.chat{
+#chat{
   max-height: 400px;
   overflow-y: auto;
   background-color: rgba(241, 241, 241, 0.993);
